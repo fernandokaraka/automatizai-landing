@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,8 +32,9 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA & Theme Toggle */}
         <div className="hidden md:flex items-center space-x-4">
+          <ThemeToggle />
           <button className="btn-secondary">
             Ver Demo
           </button>
@@ -41,13 +43,16 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-foreground"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile - Theme Toggle & Menu Button */}
+        <div className="md:hidden flex items-center space-x-3">
+          <ThemeToggle />
+          <button 
+            className="text-foreground"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}

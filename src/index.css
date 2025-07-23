@@ -83,7 +83,7 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 204 69% 81%; /* Lighter blue for dark mode */
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -101,6 +101,7 @@ All colors MUST be HSL.
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -109,6 +110,20 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom design tokens for Automatizaí - Dark Mode */
+    --brand-primary: 204 69% 81%; /* Lighter blue for dark mode */
+    --brand-secondary: 208 100% 35%; /* Darker blue for accent */
+    --neutral-light: 217.2 32.6% 17.5%; /* Dark neutral */
+    --neutral-dark: 210 40% 98%; /* Light text for dark mode */
+    
+    /* Gradients for dark mode */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--neutral-light) / 0.5));
+    
+    /* Shadows for dark mode */
+    --shadow-card: 0 4px 20px hsl(var(--brand-primary) / 0.2);
+    --shadow-hover: 0 8px 30px hsl(var(--brand-primary) / 0.25);
   }
 }
 
