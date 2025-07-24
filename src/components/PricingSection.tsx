@@ -4,36 +4,34 @@ const plans = [
   {
     name: 'Essencial',
     description: 'Ideal para pequenos negócios',
-    price: 'R$ 1.497',
+    price: 'R$ 897',
     period: 'implementação única',
     savings: 'Sem mensalidades fixas',
     features: [
-      'Implementação completa da IA',
+      'Integração com LLM (ChatGPT/Claude)',
       'Integração WhatsApp Business',
       'Configuração personalizada',
-      'Treinamento da equipe',
       'Suporte por 30 dias',
       'Apenas custos de infraestrutura'
     ],
     popular: false,
-    infrastructure: 'A partir de R$ 0,15/conversa'
+    infrastructure: 'A partir de R$ 0,10/conversa'
   },
   {
     name: 'Profissional',
     description: 'Para empresas em crescimento',
-    price: 'R$ 2.997',
+    price: 'R$ 1.697',
     period: 'implementação única',
     savings: 'ROI em 60 dias',
     features: [
       'Tudo do plano Essencial',
       'Múltiplas integrações (CRM, ERP)',
       'Automações avançadas',
-      'Dashboard de analytics',
       'Suporte prioritário por 90 dias',
       'Otimização contínua'
     ],
     popular: true,
-    infrastructure: 'A partir de R$ 0,12/conversa'
+    infrastructure: 'A partir de R$ 0,08/conversa'
   },
   {
     name: 'Enterprise',
@@ -45,9 +43,8 @@ const plans = [
       'Implementação 100% customizada',
       'Integrações ilimitadas',
       'Suporte dedicado 24/7',
-      'SLA garantido',
       'Servidor dedicado opcional',
-      'Consultoria estratégica'
+      'Customizações exclusivas'
     ],
     popular: false,
     infrastructure: 'Preço personalizado'

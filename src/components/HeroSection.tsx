@@ -44,11 +44,11 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Integração em 5 minutos</span>
+                <span>Integração rápida</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span>Economia até 60%</span>
+                <span>Redução de custos</span>
               </div>
             </div>
           </div>
