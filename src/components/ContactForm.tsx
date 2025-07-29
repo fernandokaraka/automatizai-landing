@@ -1,20 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 const initialState = { name: '', email: '', message: '' };
-const RECAPTCHA_SITE_KEY = "6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87";
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -38,37 +44,44 @@ export default function ContactForm() {
     e.preventDefault();
     if (!validate()) return;
 
-    // Verificar o reCAPTCHA
-    const recaptchaValue = recaptchaRef.current?.getValue();
-    if (!recaptchaValue) {
-      setError('Por favor, complete o captcha.');
-      return;
-    }
-
     setLoading(true);
     setError('');
     setSuccess('');
     
     try {
+      // Executar o reCAPTCHA v3
+      const token = await window.grecaptcha.execute('6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87', { action: 'submit' });
+      
       const { error } = await supabase.from('contacts').insert([
         { 
           name: form.name, 
           email: form.email, 
           message: form.message,
-          recaptcha: recaptchaValue // Opcional: enviar o token para verificação no backend
+          recaptcha_token: token
         }
       ]);
       
       if (error) throw error;
       setSuccess('Mensagem enviada com sucesso!');
       setForm(initialState);
-      recaptchaRef.current?.reset();
     } catch (err: any) {
       setError('Erro ao enviar mensagem. Tente novamente.');
+      console.error('Error:', err);
     } finally {
       setLoading(false);
     }
   };
+
+  // Carregar o reCAPTCHA v3
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87`;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="contato" className="py-20 bg-muted/30 fade-in-up">
@@ -128,17 +141,6 @@ export default function ContactForm() {
                   rows={4}
                   disabled={loading}
                   required
-                />
-              </div>
-              
-              {/* reCAPTCHA */}
-              <div className="flex justify-center">
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey="6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87"
-                  theme="light"
-                  size="normal"
-                  hl="pt-BR"
                 />
               </div>
 
