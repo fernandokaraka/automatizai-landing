@@ -1,6 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
-import logoClaro from '../assets/logo - Automatizai - claro.png';
-import logoEscuro from '../assets/logo - Automatizai - escuro.png';
+import logoFooter from '../logo_footer_branco.png';
 import { useEffect, useState } from 'react';
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <footer id="contato" className="bg-neutral-dark dark:bg-card text-gray-100 dark:text-foreground py-16 border-t border-border">
+    <footer id="contato" className="bg-primary text-white py-16 border-t border-border">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
@@ -21,9 +20,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img
-                src={isDark ? logoEscuro : logoClaro}
+                src={logoFooter}
                 alt="Logo Automatizai"
-                className="w-24 h-24 object-contain"
+                className="w-32 h-auto object-contain"
               />
             </div>
             <p className="text-gray-300 dark:text-muted-foreground leading-relaxed">
