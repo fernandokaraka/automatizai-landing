@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const initialState = { name: '', email: '', message: '' };
+const RECAPTCHA_SITE_KEY = "6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87";
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,16 +37,32 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+
+    // Verificar o reCAPTCHA
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      setError('Por favor, complete o captcha.');
+      return;
+    }
+
     setLoading(true);
     setError('');
     setSuccess('');
+    
     try {
       const { error } = await supabase.from('contacts').insert([
-        { name: form.name, email: form.email, message: form.message }
+        { 
+          name: form.name, 
+          email: form.email, 
+          message: form.message,
+          recaptcha: recaptchaValue // Opcional: enviar o token para verificação no backend
+        }
       ]);
+      
       if (error) throw error;
       setSuccess('Mensagem enviada com sucesso!');
       setForm(initialState);
+      recaptchaRef.current?.reset();
     } catch (err: any) {
       setError('Erro ao enviar mensagem. Tente novamente.');
     } finally {
@@ -111,6 +130,16 @@ export default function ContactForm() {
                   required
                 />
               </div>
+              
+              {/* reCAPTCHA */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  theme="light"
+                />
+              </div>
+
               {error && <div className="text-red-600 text-sm font-medium">{error}</div>}
               {success && <div className="text-green-600 text-sm font-medium">{success}</div>}
               <Button type="submit" className="w-full mt-2" disabled={loading}>
