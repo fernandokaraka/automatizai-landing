@@ -53,7 +53,14 @@ export default function ContactForm() {
 
   return (
     <section id="contato" className="py-20 bg-muted/30 fade-in-up">
-      <div className="container mx-auto px-4 flex justify-center">
+      <div className="container mx-auto px-4 flex flex-col items-center justify-center max-w-2xl">
+        {/* Texto introdutório */}
+        <div className="mb-8 text-center">
+          <h2 className="text-4xl font-heading font-bold text-primary mb-2">Entre em contato</h2>
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            Tem dúvidas, sugestões ou quer conversar sobre automação? Preencha o formulário abaixo e nossa equipe responderá o mais rápido possível!
+          </p>
+        </div>
         <Card className="w-full max-w-lg shadow-2xl border-primary/10">
           <CardHeader className="text-center pb-2">
             <CardTitle className="font-heading text-3xl font-bold text-foreground mb-2">

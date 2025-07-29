@@ -6,15 +6,18 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
+// Adicione a tabela contacts aqui:
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
-  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.12 (cd3cf9e)"
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contacts: {
+        Row: { id: number; name: string; email: string; message: string }
+        Insert: { name: string; email: string; message: string }
+        Update: { name?: string; email?: string; message?: string }
+      }
     }
     Views: {
       [_ in never]: never
