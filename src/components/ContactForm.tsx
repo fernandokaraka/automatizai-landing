@@ -135,8 +135,10 @@ export default function ContactForm() {
               <div className="flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey={RECAPTCHA_SITE_KEY}
+                  sitekey="6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87"
                   theme="light"
+                  size="normal"
+                  hl="pt-BR"
                 />
               </div>
 
