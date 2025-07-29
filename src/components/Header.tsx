@@ -1,19 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import logoClaro from '../assets/logo - Automatizai - claro.png';
+import logoEscuro from '../assets/logo - Automatizai - escuro.png';
 
 const Header = () => {
+  const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => {
+      return document.documentElement.classList.contains('dark');
+    };
+    setIsDark(checkDark());
+    const observer = new MutationObserver(() => setIsDark(checkDark()));
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">A</span>
-          </div>
-          <span className="font-heading text-xl font-bold text-foreground">Automatizaí</span>
+        <div className="flex items-center min-w-[12rem]">
+          <img
+            src={isDark ? logoEscuro : logoClaro}
+            alt="Logo Automatizai"
+            className="w-40 h-40 object-contain -my-8"
+          />
         </div>
 
         {/* Desktop Navigation */}

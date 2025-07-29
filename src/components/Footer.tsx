@@ -1,6 +1,17 @@
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import logoClaro from '../assets/logo - Automatizai - claro.png';
+import logoEscuro from '../assets/logo - Automatizai - escuro.png';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+  const [isDark, setIsDark] = useState(false);
+  useEffect(() => {
+    const checkDark = () => document.documentElement.classList.contains('dark');
+    setIsDark(checkDark());
+    const observer = new MutationObserver(() => setIsDark(checkDark()));
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
   return (
     <footer id="contato" className="bg-neutral-dark dark:bg-card text-gray-100 dark:text-foreground py-16 border-t border-border">
       <div className="container mx-auto px-4">
@@ -9,10 +20,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">A</span>
-              </div>
-              <span className="font-heading text-xl font-bold">Automatizaí</span>
+              <img
+                src={isDark ? logoEscuro : logoClaro}
+                alt="Logo Automatizai"
+                className="w-24 h-24 object-contain"
+              />
             </div>
             <p className="text-gray-300 dark:text-muted-foreground leading-relaxed">
               Transformando o atendimento ao cliente com inteligência artificial. 
