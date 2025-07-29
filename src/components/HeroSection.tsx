@@ -1,5 +1,5 @@
 import { ArrowRight, Play } from 'lucide-react';
-import heroChatbot from '../assets/hero-chatbot.png';
+import heroImage from '../Automatizai header v1.png';
 
 const HeroSection = () => {
   return (
@@ -37,18 +37,18 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 pt-6">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Disponível 24/7</span>
+            <div className="flex flex-wrap gap-8 items-center text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>99.9% Uptime</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Integração rápida</span>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                <span>ISO 27001</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span>Redução de custos</span>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                <span>LGPD Compliant</span>
               </div>
             </div>
           </div>
@@ -62,8 +62,8 @@ const HeroSection = () => {
               {/* Main Image Container */}
               <div className="relative bg-gradient-to-br from-background to-muted rounded-3xl p-8 shadow-2xl">
                 <img 
-                  src={heroChatbot} 
-                  alt="AI Chatbot Assistant" 
+                  src={heroImage}
+                  alt="Automatizai IA Assistant"
                   className="w-full h-auto max-w-md mx-auto"
                 />
                 
