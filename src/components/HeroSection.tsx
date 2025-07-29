@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-8 items-center text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span>99.9% Uptime</span>
+                <span>99.9% Online</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-blue-500"></div>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                <span>LGPD Compliant</span>
+                <span>LGPD</span>
               </div>
             </div>
           </div>

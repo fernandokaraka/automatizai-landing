@@ -21,16 +21,16 @@ const Footer = () => {
               Disponível 24/7 para fazer seu negócio crescer.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://facebook.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://instagram.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://linkedin.com/company/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://twitter.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Twitter size={20} />
               </a>
             </div>
