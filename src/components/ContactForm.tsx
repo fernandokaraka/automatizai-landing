@@ -257,14 +257,7 @@ export default function ContactForm() {
         { 
           name: form.name,
           email: form.email,
-          phone: form.phone,
-          company: form.company,
-          role: form.role,
-          industry: form.industry,
-          message: form.message,
-          interest: form.interest,
-          budget: form.budget,
-          recaptcha_token: token
+          message: form.message
         }
       ]);
       
