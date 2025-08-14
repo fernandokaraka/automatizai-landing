@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/80 dark:text-white text-sm">
-              © 2024 Automatizaí. Todos os direitos reservados.
+              © 2025 Automatizaí. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
               <a href="/politica-de-privacidade" className="text-white/80 dark:text-white text-sm">
