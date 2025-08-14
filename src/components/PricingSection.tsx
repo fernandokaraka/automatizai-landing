@@ -2,52 +2,52 @@ import { Check, ArrowRight, Crown } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Essencial',
-    description: 'Ideal para pequenos negócios',
-    price: 'R$ 897',
-    period: 'implementação única',
-    savings: 'Sem mensalidades fixas',
+    name: 'Starter',
+    description: 'Até 100 atendimentos/mês',
+    price: 'R$ 247/mês',
+    period: '',
+    savings: 'Setup inicial a partir de R$ 149',
     features: [
-      'Integração com LLM (ChatGPT/Claude)',
-      'Integração WhatsApp Business',
-      'Configuração personalizada',
-      'Suporte por 30 dias',
-      'Apenas custos de infraestrutura'
+      'WhatsApp com IA (texto e áudio)',
+      'Integração com Google Agenda',
+      'Triagem e FAQ automáticos',
+      'IA especializada por nicho',
+      'Relatórios básicos em Sheets'
     ],
     popular: false,
-    infrastructure: 'A partir de R$ 0,10/conversa'
+    infrastructure: 'Custo por atendimento ~ R$ 0,01'
   },
   {
-    name: 'Profissional',
-    description: 'Para empresas em crescimento',
-    price: 'R$ 1.697',
-    period: 'implementação única',
-    savings: 'ROI em 60 dias',
+    name: 'Pro',
+    description: 'Até 500 atendimentos/mês',
+    price: 'R$ 597/mês',
+    period: '',
+    savings: 'Setup inicial a partir de R$ 249',
     features: [
-      'Tudo do plano Essencial',
-      'Múltiplas integrações (CRM, ERP)',
-      'Automações avançadas',
-      'Suporte prioritário por 90 dias',
-      'Otimização contínua'
+      'Tudo do Starter',
+      'Integração com Google Docs e Sheets',
+      'Personalização de contexto e prompts',
+      'Automações no n8n (self-hosted)',
+      'Suporte prioritário'
     ],
     popular: true,
-    infrastructure: 'A partir de R$ 0,08/conversa'
+    infrastructure: 'Transcrição de áudio ~ R$ 0,03/áudio'
   },
   {
     name: 'Enterprise',
-    description: 'Solução completa para grandes empresas',
-    price: 'Sob consulta',
+    description: '1.200+ atendimentos/mês',
+    price: 'R$ 1.197/mês',
     period: '',
-    savings: 'ROI em 30 dias',
+    savings: 'Setup inicial a partir de R$ 399',
     features: [
-      'Implementação 100% customizada',
-      'Integrações ilimitadas',
-      'Suporte dedicado 24/7',
-      'Servidor dedicado opcional',
-      'Customizações exclusivas'
+      'Orquestração avançada no n8n',
+      'Integrações sob demanda',
+      'White label para agências',
+      'Servidor/VPS dedicado',
+      'Suporte dedicado 24/7'
     ],
     popular: false,
-    infrastructure: 'Preço personalizado'
+    infrastructure: 'WhatsApp Cloud API: 1.000 conversas grátis'
   }
 ];
 
@@ -58,12 +58,10 @@ const PricingSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Implementação única,{' '}
-            <span className="text-primary">resultados infinitos</span>
+            Planos simples para começar agora
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Pague apenas uma vez pela implementação. Depois, apenas os custos 
-            reais de infraestrutura baseados no seu uso.
+            Atenda clientes no WhatsApp com IA. Integre Google Agenda, Docs e Sheets sem complicar.
           </p>
         </div>
 
@@ -134,7 +132,7 @@ const PricingSection = () => {
               </div>
 
               {/* CTA Button */}
-              <button 
+              <a 
                 className={`
                   w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300
                   ${plan.popular 
@@ -142,10 +140,11 @@ const PricingSection = () => {
                     : 'btn-secondary'
                   }
                 `}
+                href="#contato"
               >
                 {plan.name === 'Enterprise' ? 'Falar com Vendas' : 'Escolher Plano'}
                 <ArrowRight size={16} />
-              </button>
+              </a>
 
               {/* Implementation Notice */}
               {plan.name !== 'Enterprise' && (
@@ -168,12 +167,12 @@ const PricingSection = () => {
               para o seu negócio. Agende uma conversa gratuita.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-secondary">
+              <a href="#contato" className="btn-secondary">
                 Agendar Consultoria Grátis
-              </button>
-              <button className="btn-primary">
+              </a>
+              <a href="https://wa.me/5511931510669?text=Ol%C3%A1!%20Quero%20automatizar%20meu%20atendimento%20no%20WhatsApp%20com%20IA.%20Podemos%20conversar?" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Falar com Especialista
-              </button>
+              </a>
             </div>
           </div>
         </div>

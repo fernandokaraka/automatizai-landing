@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
   const phoneNumber = "5511931510669";
-  const message = encodeURIComponent("Olá! Gostaria de saber mais sobre o Automatizaí.");
+  const message = encodeURIComponent("Olá! Quero automatizar meu atendimento no WhatsApp com IA. Podemos conversar?");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
       aria-label="Fale conosco no WhatsApp"
     >
       <MessageCircle size={24} />
-      <span className="hidden md:inline">Fale Conosco</span>
+      <span className="hidden md:inline">Fale conosco</span>
     </a>
   );
 };

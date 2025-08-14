@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import logoFooter from '../logo_footer_branco.png';
 
 const Footer = () => {
@@ -20,18 +20,18 @@ const Footer = () => {
               Transformando o atendimento ao cliente com inteligência artificial. 
               Disponível 24/7 para fazer seu negócio crescer.
             </p>
+            <p className="text-white/80 text-sm">
+              Automatizaí é um produto da <a href="https://marketai.com.br" target="_blank" rel="noopener noreferrer" className="underline">Marketaí</a>.
+            </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61569039497200" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://www.instagram.com/marketai.br/" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com/company/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/marketa%C3%AD/" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="https://twitter.com/automatizai" target="_blank" rel="noopener noreferrer" className="text-white/80 dark:text-white transition-colors">
-                <Twitter size={20} />
               </a>
             </div>
           </div>
@@ -56,33 +56,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#sobre" className="text-white/80 dark:text-white">
-                  Sobre Nós
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Suporte */}
-          <div>
-            <h4 className="font-heading font-bold mb-4 text-white">Suporte</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-white/80 dark:text-white">
-                  Central de Ajuda
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 dark:text-white">
-                  Documentação
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 dark:text-white">
-                  Status do Sistema
-                </a>
-              </li>
-              <li>
                 <a href="#contato" className="text-white/80 dark:text-white">
                   Contato
                 </a>
@@ -90,23 +63,30 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Espaço reservado (removido Suporte) */}
+          <div></div>
+
           {/* Contato */}
           <div>
             <h4 className="font-heading font-bold mb-4 text-white">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-white" />
-                <a href="mailto:contato@automatizai.com.br" className="text-white/80 dark:text-white">
-                  contato@automatizai.com.br
+                <a href="mailto:contato@marketai.com.br" className="text-white/80 dark:text-white">
+                  contato@marketai.com.br
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-white" />
-                <span className="text-white/80 dark:text-white">(11) 9 9999-9999</span>
+                <a
+                  href="https://wa.me/5511931510669?text=Ol%C3%A1!%20Quero%20automatizar%20meu%20atendimento%20no%20WhatsApp%20com%20IA.%20Podemos%20conversar?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 dark:text-white underline"
+                >
+                  11 93151-0669 (WhatsApp)
+                </a>
               </div>
-              <button className="bg-white text-primary dark:bg-white dark:text-primary px-6 py-2 rounded-lg font-medium hover:bg-white/90">
-                Falar Conosco
-              </button>
             </div>
           </div>
         </div>
@@ -118,14 +98,11 @@ const Footer = () => {
               © 2024 Automatizaí. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-white/80 dark:text-white text-sm">
+              <a href="/politica-de-privacidade" className="text-white/80 dark:text-white text-sm">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-white/80 dark:text-white text-sm">
+              <a href="/termos-de-uso" className="text-white/80 dark:text-white text-sm">
                 Termos de Uso
-              </a>
-              <a href="#" className="text-white/80 dark:text-white text-sm">
-                Cookies
               </a>
             </div>
           </div>

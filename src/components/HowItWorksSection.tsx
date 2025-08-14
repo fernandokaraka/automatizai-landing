@@ -4,8 +4,8 @@ const steps = [
   {
     number: 1,
     icon: MessageSquare,
-    title: 'Conecte sua conta',
-    description: 'Integre facilmente com WhatsApp Business API e configure seu perfil em minutos.'
+    title: 'Conecte o WhatsApp',
+    description: 'Ligamos sua empresa à WhatsApp Cloud API de forma segura e rápida.'
   },
   {
     number: 2,
@@ -16,8 +16,8 @@ const steps = [
   {
     number: 3,
     icon: Rocket,
-    title: 'Ative e monitore',
-    description: 'Coloque no ar e acompanhe métricas em tempo real. Sua IA aprende e melhora automaticamente.'
+    title: 'Ative e acompanhe',
+    description: 'IA atendendo 24/7. Integrações com Google Agenda, Docs e Sheets para o dia a dia.'
   }
 ];
 
@@ -93,11 +93,11 @@ const HowItWorksSection = () => {
               Pronto para começar?
             </h3>
             <p className="text-muted-foreground mb-6">
-              Configure sua IA em menos de 5 minutos e comece a atender seus clientes hoje mesmo.
+              Comece hoje: triagem e agendamento automáticos no WhatsApp.
             </p>
-            <button className="btn-primary text-lg px-8 py-3">
-              Começar Agora - É Grátis
-            </button>
+            <a href="#contato" className="btn-primary text-lg px-8 py-3">
+              Falar com um especialista
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,55 @@
+{
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "portuguese": "Portuguese"
+  },
+  "header": {
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Automate your processes",
+    "subtitle": "Transform your business with intelligent solutions"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "description": "Have questions, suggestions, or want to talk about automation? Fill out the form below and our team will respond as soon as possible!",
+    "steps": {
+      "personal": {
+        "title": "Personal Information",
+        "description": "Your contact details"
+      },
+      "professional": {
+        "title": "Professional Information",
+        "description": "Your company details"
+      },
+      "project": {
+        "title": "Project Details",
+        "description": "Tell us about your needs"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company Name",
+      "role": "Your Role",
+      "role_placeholder": "Ex: Manager, Director, etc",
+      "industry": "Industry",
+      "industry_placeholder": "Select your industry",
+      "interest": "Main Interest",
+      "interest_placeholder": "Select your area of interest",
+      "budget": "Monthly Budget",
+      "budget_placeholder": "Select your budget",
+      "message": "Message",
+      "message_placeholder": "Describe your needs, challenges, or goals...",
+      "required": "Required field",
+      "next": "Next",
+      "back": "Back",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully! Our team will contact you soon.",
+      "error": "Error sending message. Please try again."
+    }
+  }
+} 

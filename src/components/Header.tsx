@@ -49,12 +49,9 @@ const Header = () => {
         {/* Desktop CTA & Theme Toggle */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <button className="btn-secondary">
-            Ver Demo
-          </button>
-          <button className="btn-primary">
-            Testar Grátis
-          </button>
+          <a href="#contato" className="btn-primary">
+            Começar agora
+          </a>
         </div>
 
         {/* Mobile - Theme Toggle & Menu Button */}
@@ -102,12 +99,9 @@ const Header = () => {
               Contato
             </a>
             <div className="flex flex-col space-y-3 pt-4">
-              <button className="btn-secondary">
-                Ver Demonstração
-              </button>
-              <button className="btn-primary">
-                Testar Gratuitamente
-              </button>
+              <a href="#contato" className="btn-primary">
+                Começar agora
+              </a>
             </div>
           </div>
         </div>

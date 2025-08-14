@@ -1,25 +1,25 @@
-import { Clock, DollarSign, Zap, TrendingUp } from 'lucide-react';
+import { Clock, Calendar, Bot, HelpCircle } from 'lucide-react';
 
 const benefits = [
   {
     icon: Clock,
-    title: 'Disponibilidade Ininterrupta',
-    description: 'Atendimento 24 horas por dia, 7 dias por semana, sem pausas ou intervalos. Seus clientes sempre terão suporte quando precisarem.'
+    title: 'Atendimento 24/7',
+    description: 'Seus clientes são atendidos a qualquer hora, inclusive fora do horário comercial.'
   },
   {
-    icon: DollarSign,
-    title: 'Economia Garantida',
-    description: 'Reduza custos operacionais em até 60% com automação inteligente. Margem de lucro comprovada para seu negócio.'
+    icon: Calendar,
+    title: 'Agendamentos sem erro',
+    description: 'Integração com Google Agenda para marcar, remarcar e confirmar automaticamente.'
   },
   {
-    icon: Zap,
-    title: 'Integração Ágil',
-    description: 'Conecte facilmente com WhatsApp API e n8n. Configuração rápida em apenas 5 minutos, sem complicações técnicas.'
+    icon: Bot,
+    title: 'IA por nicho',
+    description: 'Modelos treinados para clínicas, imóveis, restaurantes, farmácias, pets, salões e mais.'
   },
   {
-    icon: TrendingUp,
-    title: 'Escalabilidade Flexível',
-    description: 'Cresça sem limites. Nossa IA se adapta ao volume de atendimentos e aprende com cada interação para melhorar continuamente.'
+    icon: HelpCircle,
+    title: 'Triagem e FAQ automáticos',
+    description: 'Filtragem inicial, respostas a perguntas frequentes e encaminhamento inteligente ao humano quando necessário.'
   }
 ];
 
@@ -34,8 +34,7 @@ const BenefitsSection = () => {
             <span className="text-primary">Automatizaí</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Transforme o atendimento do seu negócio com tecnologia de ponta 
-            que realmente entrega resultados comprovados.
+            A ponte entre o pequeno negócio e o atendimento com IA. Rápido. Personalizado. Sem complicar.
           </p>
         </div>
 
@@ -76,14 +75,9 @@ const BenefitsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 fade-in-up">
-          <div className="inline-flex items-center gap-4 bg-primary/5 rounded-2xl px-8 py-6">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="font-medium text-foreground">
-                Mais de 500+ empresas já confiam no Automatizaí
-              </span>
-            </div>
-          </div>
+          <a href="#contato" className="btn-primary text-lg px-8 py-3">
+            Quero automatizar meu WhatsApp
+          </a>
         </div>
       </div>
     </section>

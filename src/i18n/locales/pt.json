@@ -1,0 +1,55 @@
+{
+  "common": {
+    "language": "Idioma",
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+  "header": {
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Automatize seus processos",
+    "subtitle": "Transforme sua empresa com soluções inteligentes"
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "description": "Tem dúvidas, sugestões ou quer conversar sobre automação? Preencha o formulário abaixo e nossa equipe responderá o mais rápido possível!",
+    "steps": {
+      "personal": {
+        "title": "Informações Pessoais",
+        "description": "Seus dados de contato"
+      },
+      "professional": {
+        "title": "Informações Profissionais",
+        "description": "Dados da sua empresa"
+      },
+      "project": {
+        "title": "Detalhes do Projeto",
+        "description": "Conte-nos sobre suas necessidades"
+      }
+    },
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "company": "Nome da Empresa",
+      "role": "Seu Cargo",
+      "role_placeholder": "Ex: Gerente, Diretor, etc",
+      "industry": "Setor de Atuação",
+      "industry_placeholder": "Selecione o setor",
+      "interest": "Principal Interesse",
+      "interest_placeholder": "Selecione sua área de interesse",
+      "budget": "Orçamento Mensal",
+      "budget_placeholder": "Selecione o orçamento",
+      "message": "Mensagem",
+      "message_placeholder": "Descreva suas necessidades, desafios ou objetivos...",
+      "required": "Campo obrigatório",
+      "next": "Próximo",
+      "back": "Voltar",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.",
+      "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    }
+  }
+} 

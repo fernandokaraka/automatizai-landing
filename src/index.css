@@ -136,4 +136,10 @@ All colors MUST be HSL.
   .fade-in-up.animate {
     @apply opacity-100 translate-y-0;
   }
+
+  /* Prose overrides for legal pages */
+  .prose h1, .prose h2, .prose h3 { @apply font-heading text-foreground; }
+  .prose p { @apply text-foreground/90; }
+  .prose ul { @apply list-disc pl-6; }
+  .prose a { @apply underline text-primary; }
 }

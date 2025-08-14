@@ -1,0 +1,16 @@
+{
+  "slug": "hospital-porto",
+  "titulo": "Hospital Central do Porto",
+  "resumo": "Ampliação e modernização do Hospital Central do Porto.",
+  "cidade_uf": "Porto/Portugal",
+  "tipo_obra": "Edificação",
+  "ano": 2023,
+  "capa": "/images/projects/hospital-porto/capa.jpg",
+  "imagens": [
+    "/images/projects/hospital-porto/1.jpg",
+    "/images/projects/hospital-porto/2.jpg",
+    "/images/projects/hospital-porto/3.jpg",
+    "/images/projects/hospital-porto/4.jpg"
+  ],
+  "descricao": "## Descrição\n\nO projeto de ampliação do Hospital Central do Porto trouxe novas alas, tecnologia de ponta e sustentabilidade, garantindo melhor atendimento à população."
+}

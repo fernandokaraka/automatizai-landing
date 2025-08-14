@@ -146,6 +146,7 @@ export default function ContactForm() {
   const [error, setError] = useState('');
   const [step, setStep] = useState(1);
   const [formProgress, setFormProgress] = useState(0);
+  const [recaptchaReady, setRecaptchaReady] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -234,8 +235,23 @@ export default function ContactForm() {
     setSuccess('');
     
     try {
-      // Executar o reCAPTCHA v3
-      const token = await window.grecaptcha.execute('6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87', { action: 'submit' });
+      // Executar o reCAPTCHA v3 com segurança
+      const token = await new Promise<string>((resolve) => {
+        const execute = () => {
+          const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87';
+          window.grecaptcha
+            .execute(siteKey, { action: 'submit' })
+            .then(resolve)
+            .catch(() => resolve(''));
+        };
+        if (window.grecaptcha && recaptchaReady) {
+          execute();
+        } else if (window.grecaptcha) {
+          window.grecaptcha.ready(execute);
+        } else {
+          resolve('');
+        }
+      });
       
       const { error } = await supabase.from('contacts').insert([
         { 
@@ -575,7 +591,15 @@ export default function ContactForm() {
   // Carregar o reCAPTCHA v3
   React.useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?render=6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87`;
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfDwJMrAAAAAPLHUh1HAuvHjxRv6JcdPUPb1W87';
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => {
+      if (window.grecaptcha) {
+        window.grecaptcha.ready(() => setRecaptchaReady(true));
+      }
+    };
     document.body.appendChild(script);
 
     return () => {
@@ -590,9 +614,9 @@ export default function ContactForm() {
     <section id="contato" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center max-w-2xl">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-heading font-bold text-foreground mb-3">Entre em contato</h2>
+          <h2 className="text-4xl font-heading font-bold text-foreground mb-3">Converse com um especialista</h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Tem dúvidas, sugestões ou quer conversar sobre automação? Preencha o formulário abaixo e nossa equipe responderá o mais rápido possível!
+            Quer automatizar seu atendimento no WhatsApp com IA? Integramos Google Agenda, Docs e Sheets, triagem e FAQ automáticos e IA por nicho. Fale com a gente.
           </p>
         </div>
         <Card className="w-full shadow-2xl border-primary/10">

@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Portugal Engenharia",
+    "description": "Excelencia en ingeniería y construcción en Portugal."
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "cta": "¿Listo para transformar su proyecto? ¡Contáctenos!",
+    "copyright": "© 2024 Portugal Engenharia. Todos los derechos reservados."
+  },
+  "contact": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar"
+  },
+  "portfolio": {
+    "city": "Ciudad/Provincia",
+    "type": "Tipo de obra",
+    "year": "Año",
+    "see_project": "Ver proyecto"
+  }
+}

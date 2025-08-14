@@ -1,0 +1,15 @@
+{
+  "slug": "ponte-lisboa",
+  "titulo": "Ponte sobre o Rio Tejo",
+  "resumo": "Construção de ponte estaiada ligando Lisboa a Almada.",
+  "cidade_uf": "Lisboa/Portugal",
+  "tipo_obra": "Infraestrutura",
+  "ano": 2022,
+  "capa": "/images/projects/ponte-lisboa/capa.jpg",
+  "imagens": [
+    "/images/projects/ponte-lisboa/1.jpg",
+    "/images/projects/ponte-lisboa/2.jpg",
+    "/images/projects/ponte-lisboa/3.jpg"
+  ],
+  "descricao": "## Descrição\n\nA Ponte sobre o Rio Tejo é um marco de engenharia moderna, conectando Lisboa a Almada com design inovador e alta durabilidade. O projeto envolveu técnicas avançadas de construção e gestão ambiental."
+}
