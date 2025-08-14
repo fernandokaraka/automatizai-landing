@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoFooter from '../logo_footer_branco.png';
 
 const Footer = () => {
@@ -98,12 +99,12 @@ const Footer = () => {
               © 2025 Automatizaí. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
-              <a href="/politica-de-privacidade" className="text-white/80 dark:text-white text-sm">
+              <Link to="/politica-de-privacidade" className="text-white/80 dark:text-white text-sm">
                 Política de Privacidade
-              </a>
-              <a href="/termos-de-uso" className="text-white/80 dark:text-white text-sm">
+              </Link>
+              <Link to="/termos-de-uso" className="text-white/80 dark:text-white text-sm">
                 Termos de Uso
-              </a>
+              </Link>
             </div>
           </div>
         </div>
