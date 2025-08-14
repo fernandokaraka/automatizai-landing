@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoFooter from '../logo_footer_branco.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,11 +12,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img
-                src={logoFooter}
-                alt="Logo Automatizai"
-                className="w-32 h-auto object-contain"
-              />
+              <Link to="/" aria-label="Ir para a página inicial">
+                <img
+                  src={logoFooter}
+                  alt="Logo Automatizai"
+                  className="w-32 h-auto object-contain"
+                />
+              </Link>
             </div>
             <p className="text-white/90 dark:text-white leading-relaxed">
               Transformando o atendimento ao cliente com inteligência artificial. 

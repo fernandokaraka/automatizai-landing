@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import logoClaro from '../assets/logo - Automatizai - claro.png';
@@ -23,15 +24,20 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center min-w-[12rem]">
-          <img
-            src={isDark ? logoEscuro : logoClaro}
-            alt="Logo Automatizai"
-            className="w-40 h-40 object-contain -my-8"
-          />
+          <Link to="/" aria-label="Ir para a página inicial">
+            <img
+              src={isDark ? logoEscuro : logoClaro}
+              alt="Logo Automatizai"
+              className="w-40 h-40 object-contain -my-8"
+            />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
+          <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            Início
+          </Link>
           <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">
             Benefícios
           </a>
@@ -70,6 +76,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <Link 
+              to="/" 
+              className="text-foreground hover:text-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Início
+            </Link>
             <a 
               href="#beneficios" 
               className="text-foreground hover:text-primary transition-colors py-2"
