@@ -1,7 +1,6 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoFooter from '../logo_footer_branco.png';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
