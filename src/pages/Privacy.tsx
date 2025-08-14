@@ -5,7 +5,7 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="container mx-auto px-4 py-28 max-w-3xl prose prose-neutral dark:prose-invert">
+      <main className="container mx-auto px-6 md:px-8 lg:px-10 py-32 max-w-3xl prose prose-neutral dark:prose-invert">
         <h1 className="font-heading text-3xl md:text-4xl font-bold mb-6">Política de Privacidade</h1>
         <p className="text-muted-foreground mb-6">Última atualização: 14/08/2025</p>
 
@@ -32,7 +32,7 @@ const Privacy = () => {
         <p className="mb-4">Tratamos dados com base no consentimento e no legítimo interesse, conforme a LGPD.</p>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">5. Compartilhamento</h2>
-        <p className="mb-4">Podemos compartilhar dados com provedores essenciais para o funcionamento (ex.: OpenAI/Gemini, WhatsApp Cloud API, Google, hospedagem/VPS), sempre sob contratos e segurança adequados.</p>
+        <p className="mb-4">Podemos compartilhar dados com provedores essenciais para o funcionamento (ex.: OpenAI/Gemini, WhatsApp Cloud API e Google), sempre sob contratos e segurança adequados.</p>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">6. Segurança</h2>
         <p className="mb-4">Adotamos medidas técnicas e organizacionais para proteger seus dados. Nenhum método é 100% infalível, mas buscamos as melhores práticas de mercado.</p>

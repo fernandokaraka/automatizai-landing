@@ -15,7 +15,7 @@ const plans = [
       'Relatórios básicos em Sheets'
     ],
     popular: false,
-    infrastructure: 'Custo por atendimento ~ R$ 0,01'
+    infrastructure: ''
   },
   {
     name: 'Pro',
@@ -27,11 +27,10 @@ const plans = [
       'Tudo do Starter',
       'Integração com Google Docs e Sheets',
       'Personalização de contexto e prompts',
-      'Automações no n8n (self-hosted)',
       'Suporte prioritário'
     ],
     popular: true,
-    infrastructure: 'Transcrição de áudio ~ R$ 0,03/áudio'
+    infrastructure: ''
   },
   {
     name: 'Enterprise',
@@ -40,14 +39,12 @@ const plans = [
     period: '',
     savings: 'Setup inicial a partir de R$ 399',
     features: [
-      'Orquestração avançada no n8n',
+      'Integrações e fluxos avançados',
       'Integrações sob demanda',
-      'White label para agências',
-      'Servidor/VPS dedicado',
       'Suporte dedicado 24/7'
     ],
     popular: false,
-    infrastructure: 'WhatsApp Cloud API: 1.000 conversas grátis'
+    infrastructure: ''
   }
 ];
 
@@ -111,12 +108,7 @@ const PricingSection = () => {
                 </div>
 
                 {/* Infrastructure Cost */}
-                {plan.infrastructure && (
-                  <div className="mt-3 text-sm text-muted-foreground">
-                    <span className="font-medium">Infraestrutura: </span>
-                    {plan.infrastructure}
-                  </div>
-                )}
+                {false && plan.infrastructure}
               </div>
 
               {/* Features */}

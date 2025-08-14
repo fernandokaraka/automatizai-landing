@@ -5,14 +5,14 @@ const Terms = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="container mx-auto px-4 py-28 max-w-3xl prose prose-neutral dark:prose-invert">
+      <main className="container mx-auto px-6 md:px-8 lg:px-10 py-32 max-w-3xl prose prose-neutral dark:prose-invert">
         <h1 className="font-heading text-3xl md:text-4xl font-bold mb-6">Termos de Uso</h1>
         <p className="text-muted-foreground mb-6">Última atualização: 14/08/2025</p>
 
         <p className="mb-4">Estes Termos regulam o uso do site e dos serviços Automatizaí, produto da Marketaí. Ao utilizar nossa plataforma, você concorda com estes Termos.</p>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">1. Serviços</h2>
-        <p className="mb-4">Oferecemos automação de atendimento via WhatsApp com integração a terceiros (Google, OpenAI/Gemini, WhatsApp Cloud API, n8n). Funcionalidades podem mudar a qualquer momento para melhoria contínua.</p>
+        <p className="mb-4">Oferecemos automação de atendimento via WhatsApp com integração a terceiros (Google, OpenAI/Gemini e WhatsApp Cloud API). Funcionalidades podem mudar a qualquer momento para melhoria contínua.</p>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">2. Cadastro e contato</h2>
         <p className="mb-4">Ao enviar o formulário, você declara que as informações são verdadeiras e autoriza nosso contato.</p>
@@ -24,7 +24,7 @@ const Terms = () => {
         </ul>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">4. Planos e cobranças</h2>
-        <p className="mb-4">Valores, limites e taxas adicionais (ex.: transcrição de áudio) estão descritos na seção de preços. Podemos atualizar preços mediante aviso prévio.</p>
+        <p className="mb-4">Valores e limites dos planos estão descritos na seção de preços. Podemos atualizar preços mediante aviso prévio.</p>
 
         <h2 className="font-heading text-2xl font-semibold mt-8 mb-3">5. Propriedade intelectual</h2>
         <p className="mb-4">Automatizaí, marca, conteúdos e softwares relacionados são propriedade da Marketaí ou licenciados. Não é permitido copiar ou redistribuir sem autorização.</p>
