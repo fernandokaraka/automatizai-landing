@@ -63,12 +63,12 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
           {plans.map((plan, index) => (
             <div 
               key={index}
               className={`
-                relative card-feature fade-in-up
+                relative card-feature fade-in-up h-full flex flex-col
                 ${plan.popular ? 'ring-2 ring-primary scale-105' : ''}
               `}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -84,7 +84,7 @@ const PricingSection = () => {
               )}
 
               {/* Plan Header */}
-              <div className="text-center mb-8">
+              <div className="text-center mb-8 min-h-[220px] md:min-h-[240px] flex flex-col items-center justify-start">
                 <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
                   {plan.name}
                 </h3>
@@ -112,7 +112,7 @@ const PricingSection = () => {
               </div>
 
               {/* Features */}
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 flex-1">
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
